@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductProps> = ({ product, slug }) => {
     <li key={product.id} className="p-1 w-1/2 md:w-1/3 lg:w-1/4">
       <Link href={`/collections/${slug}/product/${product.handle}`}>
         {product.featuredImage && (
-          <div className="relative aspect-[3/4]">
+          <div className="relative aspect-[1/1]">
             <ImageWithSkeleton 
               src={product.featuredImage.url} 
               alt={product.featuredImage.altText || ''}

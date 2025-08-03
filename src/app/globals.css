@@ -168,3 +168,7 @@ body {
 .text-stroke {
   -webkit-text-stroke: 1.5px #B69877;
 }
+
+.prose p {
+  margin-bottom: 1.5rem;
+}

@@ -12,7 +12,7 @@ const ProductDrawer: React.FC<ProductDrawerProps> = ({ data }) => {
       {
         data.html && data.details ?
         <div
-          className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none text-[#333]"
+          className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none text-[#333] prose-p-mb-16!"
           dangerouslySetInnerHTML={{ __html: data.details }}
         />
         :

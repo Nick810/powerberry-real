@@ -33,7 +33,7 @@ const RecommendedProducts: React.FC<RecommendedProductsProps> = ({ products, col
           <li key={index} className="relative min-w-[65vw] md:min-w-[55vw] lg:min-w-[33vw]">
             <Link href={`/collections/${collectionHandle}/product/${product.handle}`}>
               {product.featuredImage && (
-                <div className="aspect-[5/6]"> 
+                <div className="aspect-[1/1]"> 
                   <ImageWithSkeleton 
                   src={product.featuredImage.url} 
                   alt={product.featuredImage.altText || `Recommended product ${index + 1}`}
