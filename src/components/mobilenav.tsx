@@ -20,7 +20,7 @@ const MobileNav: React.FC<MobileNavProps> = ({toggled, toggle}) => {
 
         <ul className="flex flex-col items-start gap-6 pr-4">
           <li><Link prefetch href="/" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>Home</Link></li>
-          <li><Link prefetch href="/all-products" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>Shop</Link></li>
+          <li><Link prefetch href="/collections/all-products" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>Shop</Link></li>
           <li><Link prefetch href="/" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>News</Link></li>
           <li><Link prefetch href="/about-us" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>About</Link></li>
           <li><Link prefetch href="/blog" className="text-[4vw] md:text-xl uppercase text-white!" onClick={() => toggle(false)}>Blog</Link></li>

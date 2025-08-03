@@ -25,10 +25,11 @@ interface ProductProps {
 const ProductCard: React.FC<ProductProps> = ({ product, slug }) => {
 
   return (
-    <li key={product.id} className="p-1 w-1/2 md:w-1/3 lg:w-1/4">
+    <li key={product.id} className="p-1 w-1/2 md:w-1/3 lg:w-1/4 relative">
       <Link href={`/collections/${slug}/product/${product.handle}`}>
         {product.featuredImage && (
           <div className="relative aspect-[1/1]">
+            <div className="absolute w-full h-full hover:bg-black opacity-10 transition-all duration-300 ease-in-out z-1"></div>
             <ImageWithSkeleton 
               src={product.featuredImage.url} 
               alt={product.featuredImage.altText || ''}

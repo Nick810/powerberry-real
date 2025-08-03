@@ -5,9 +5,10 @@ import { useMemo, useState } from "react";
 type CartProps = {
   toggled: boolean;
   toggle: (open: boolean) => void;
+  bgColor: string
 };
 
-const Cart: React.FC<CartProps> = ({ toggled, toggle }) => {
+const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
   const [checkingOut, setCheckingOut] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const items = useCartStore((s) => s.items)
@@ -36,8 +37,13 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle }) => {
     [items]
   )
 
+  console.log(bgColor)
+
   return (
-    <div className={`${toggled ? 'fixed' : 'hidden'} w-full max-w-[600px] h-screen top-0 bg-[#FDF2E3] z-20`}>
+    <div 
+      className={`${toggled ? 'fixed' : 'hidden'} w-full max-w-[600px] h-screen top-0 z-20`}
+      style={{ backgroundColor: bgColor }}
+    >
       <div className="flex flex-row items-center justify-between py-6 px-[5%]">
         <h2 className="text-5xl">Cart</h2>
         <button onClick={() => toggle(false)} className="text-black cursor-pointer">
@@ -117,8 +123,6 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle }) => {
           error ?? <p className="text-[#E21515]">{error}</p>
         }
         <div className="relative mt-23">
-          <div className="absolute bg-[#F3D9B5] top-[-50px] w-[200%] h-[calc(100%+100px)]"></div>
-          <div className="absolute bg-[#E0C8A8] top-[-48px] w-[200%] h-[calc(100%+80px)] rotate-[-2.24deg] z-21"></div>
 
           <div>
             {items.length > 0 && (

@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="w-4/5 flex flex-col gap-12">
           <ul className="flex flex-col items-start gap-4">
             <li><Link href="/" className="text-md uppercase">Home</Link></li>
-            <li><Link href="/all-products" className="text-md uppercase">Shop</Link></li>
+            <li><Link href="/collections/all-products" className="text-md uppercase">Shop</Link></li>
             <li><Link href="/" className="text-md uppercase">News</Link></li>
             <li><Link href="/about-us" className="text-md uppercase">About</Link></li>
             <li><Link href="/blog" className="text-md uppercase">Blog</Link></li>

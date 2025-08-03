@@ -92,7 +92,7 @@ export default async function RootLayout({
         className={`${lazyDog.variable} antialiased`}
         style={{ backgroundColor: bgColor }}
       >
-        <Header />
+        <Header bgColor={bgColor} />
         {children}
         <Footer />
         {/* <CookieConsent /> */}

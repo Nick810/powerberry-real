@@ -169,6 +169,10 @@ body {
   -webkit-text-stroke: 1.5px #B69877;
 }
 
+.text-stroke-sm {
+  -webkit-text-stroke: 0.75px #B69877;
+}
+
 .prose p {
   margin-bottom: 1.5rem;
 }

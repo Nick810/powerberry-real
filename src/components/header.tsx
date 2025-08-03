@@ -10,7 +10,11 @@ import logo from '../../public/powerberry-logo.svg';
 import cart from '../../public/cart.svg';
 
 
-const Header: FC = () => {
+interface HeaderProps {
+  bgColor: string
+}
+
+const Header: FC<HeaderProps> = ({bgColor}) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
   
@@ -31,7 +35,7 @@ const Header: FC = () => {
         </div>
       </header>
 
-      <Cart toggled={isCartOpen} toggle={setCartOpen} />
+      <Cart toggled={isCartOpen} toggle={setCartOpen} bgColor={bgColor} />
       <MobileNav toggled={isOpen} toggle={setOpen} />
       
     </>
