@@ -32,6 +32,7 @@ interface ProductProps {
 }
 
 const ProductCard: React.FC<ProductProps> = ({ product }) => {
+  if (!product.node.collections.nodes[0]) return
 
   return (
     <li key={product.node.id} className="p-1 w-1/2 md:w-1/4">
