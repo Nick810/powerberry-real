@@ -123,7 +123,7 @@ export const GET_COLLECTION_BY_HANDLE_QUERY = gql`
   query getCollectionByHandle($handle: String!) {
     collection(handle: $handle) {
       title
-      products(first: 10) {
+      products(first: 10, sortKey: MANUAL) {
         nodes {
           id
           title

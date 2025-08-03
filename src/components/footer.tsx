@@ -1,23 +1,25 @@
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import Image from "next/image"
 import Link from "next/link"
 
-const headerFont = localFont({
-  src: '../fonts/ashford-bold-webfont.woff2',
-  weight: '700',
-  variable: '--font-header',
-  display: 'swap',
-});
+// const headerFont = localFont({
+//   src: '../fonts/ashford-bold-webfont.woff2',
+//   weight: '700',
+//   variable: '--font-header',
+//   display: 'swap',
+// });
 
 const Footer = () => {
   return (
-    <footer className="text-[#333] mt-24">
+    <footer className="text-[#333] mt-24 pb-12">
       <div className="flex w-full container">
         <div className="w-4/5 flex flex-col gap-12">
           <ul className="flex flex-col items-start gap-4">
             <li><Link href="/" className="text-md uppercase">Home</Link></li>
-            <li><Link href="/all-products" className="text-md uppercase">All Products</Link></li>
-            <li><Link href="/about-us" className="text-md uppercase">About Us</Link></li>
+            <li><Link href="/all-products" className="text-md uppercase">Shop</Link></li>
+            <li><Link href="/" className="text-md uppercase">News</Link></li>
+            <li><Link href="/about-us" className="text-md uppercase">About</Link></li>
+            <li><Link href="/blog" className="text-md uppercase">Blog</Link></li>
             <li><Link href="/contact-us" className="text-md uppercase">Contact</Link></li>
           </ul>
           <div>
@@ -35,13 +37,13 @@ const Footer = () => {
         <p className="text-xs">S<br />o<br />c<br />i<br />a<br />l<br />s</p>
       </div>
         {/* STILL NEED TO FIX SVG SIZE  */}
-        <div className="relative w-full mt-12">
+        {/* <div className="relative w-full mt-12">
           <h2 
             className={`${headerFont.variable} inset-x-0 text-[18.5vw] scale-y-125 text-[#333]!`}
             style={{ fontFamily: 'var(--font-header)'}}>
             POWERBERRY
           </h2>
-        </div>
+        </div> */}
     </footer>
   )
 }
