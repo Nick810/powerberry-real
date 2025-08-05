@@ -46,7 +46,8 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-lazy-dog);
+  font-family: "avenir-next-world", sans-serif;
+  /* font-family: var(--font-lazy-dog); */
   font-weight: bold;
   color: #333;
   line-height: 0.85;
