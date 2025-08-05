@@ -58,6 +58,24 @@ main {
   overflow: hidden;
 }
 
+.avenir-light {
+  font-family: "avenir-next-world", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.avenir-regular {
+  font-family: "avenir-next-world", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.avenir-bold {
+  font-family: "avenir-next-world", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* .simulated-bold {
   position: relative;
 }
@@ -71,8 +89,9 @@ main {
 } */
 
 p, a, span, li {
-  font-family: var(--font-comic-relief);
-  font-weight: 700;
+  font-family: "avenir-next-world", sans-serif;
+  /* font-family: var(--font-comic-relief); */
+  font-weight: 400;
   color: #333
 }
 
@@ -119,7 +138,8 @@ body {
   box-sizing: border-box;
   color: white;
   display: flex;
-  font-family: var(--font-comic-relief);
+  /* font-family: var(--font-comic-relief); */
+  font-family: "avenir-next-world", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   justify-content: center;

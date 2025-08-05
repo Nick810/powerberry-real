@@ -88,6 +88,9 @@ export default async function RootLayout({
   const bgColor = metaobjects.edges[0].node.fields[0].value;
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/djh2llz.css" />
+      </head>
       <body
         className={`${lazyDog.variable} antialiased`}
         style={{ backgroundColor: bgColor }}
