@@ -42,9 +42,9 @@ const RecommendedProducts: React.FC<RecommendedProductsProps> = ({ products, col
                 </div>
               )}
             <div className="flex flex-col">
-              <h3 className="text-md mt-4 leading-5! comic-rf">{product.title}</h3>
-              <p className="mt-2 text-sm">
-                <span className="mr-1">฿</span>{Number(product.priceRange.minVariantPrice.amount * 1).toLocaleString()}
+              <h3 className="text-md mt-4 leading-4.5! font-normal!">{product.title}</h3>
+              <p className="mt-2 text-sm font-bold!">
+                ฿{Number(product.priceRange.minVariantPrice.amount * 1).toLocaleString()}
               </p>
             </div>
             </Link>
