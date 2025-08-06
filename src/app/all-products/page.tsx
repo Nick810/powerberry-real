@@ -10,7 +10,7 @@ export default async function Page() {
     <main className="pt-16">
       <Breadcrumb path={ 'all products' } subPath={''} />
       <div className="mt-8 px-1">
-        <h1 className="text-4xl mb-8! text-center">All Products</h1>
+        <h1 className="text-4xl mb-8! text-center">Shop Collection</h1>
 
         <ul className="flex flex-wrap gap-y-8">
           {
