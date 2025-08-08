@@ -24,7 +24,8 @@
   --lg: var(--lg);
   --xl: var(--xl);
   --2xl: var(--2xl);
-  --max: var(--max-width-cotainer);
+  --max: var(--max-width-container);
+  --main-button-color: var(--main-button-color);
 }
 
 @layer utilities {
@@ -118,28 +119,26 @@ body {
   font-family: var(--font-lazy-dog);
 }
 
-/* .btn {
-  background-color: #D51F1F;
-  font-family: var(--font-comic-relief);
+.btn {
+  font-family: "avenir-next-world", sans-serif;
   width: 100%;
   display: block;
-  padding: 12px 45px;
-  box-shadow: 6px 6px 0 #6c0000;
-  transform: skewX(-15deg);
+  padding: 16px 48px;
+  /* box-shadow: 6px 6px 0 #6c0000; */
+  /* transform: skewX(-15deg); */
   color: white;
   border-radius: 4px;
   font-weight: bold;
-} */
+}
 
 /* CSS */
-.btn {
+/* .btn {
   text-transform: uppercase;
   background-color: #E94B8A;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
   color: white;
   display: flex;
-  /* font-family: var(--font-comic-relief); */
   font-family: "avenir-next-world", sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -158,12 +157,12 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
+} */
 
 .btn:focus {
   outline: 0;
 }
-
+/* 
 .btn:after {
   content: '';
   position: absolute;
@@ -172,12 +171,12 @@ body {
   left: 4px;
   width: calc(100% - 1px);
   height: calc(100% - 1px);
-}
+} */
 
-.btn:hover:after {
+/* .btn:hover:after {
   bottom: 2px;
   left: 2px;
-}
+} */
 
 @media (min-width: 768px) {
   .btn {
@@ -196,4 +195,8 @@ body {
 
 .prose p {
   margin-bottom: 1.5rem;
+}
+
+.btn-main-color {
+  background-color: var(--main-button-color);
 }

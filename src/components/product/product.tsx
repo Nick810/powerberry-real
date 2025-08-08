@@ -110,7 +110,7 @@ const Product: React.FC<ProductProps> = ({ product, colorMap }) => {
         </label>
 
         <button
-          className="btn cursor-pointer m-auto"
+          className="btn cursor-pointer m-auto btn-main-color"
           onClick={handleAddToCart}
           disabled={!selected.availableForSale}
         >

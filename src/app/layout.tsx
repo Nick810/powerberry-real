@@ -9,6 +9,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ShopifyMetaobjectsResponse } from "@/lib/shopify/types";
 import { getMetaObjects } from "@/lib/shopify/api";
+import { ThemeHydrator } from "@/components/theme-hydrator";
 // import CookieConsent from "@/components/cookie-consent";
 
 const lazyDog = localFont({
@@ -86,6 +87,7 @@ export default async function RootLayout({
 }>) {
   const { metaobjects }: ShopifyMetaobjectsResponse = await getMetaObjects('theme_color');
   const bgColor = metaobjects.edges[0].node.fields[0].value;
+
   return (
     <html lang="en">
       <head>
@@ -93,11 +95,11 @@ export default async function RootLayout({
       </head>
       <body
         className={`${lazyDog.variable} antialiased`}
-        style={{ backgroundColor: bgColor }}
       >
         <Header bgColor={bgColor} />
         {children}
         <Footer />
+        <ThemeHydrator handle="theme_color"/>
         {/* <CookieConsent /> */}
       </body>
     </html>

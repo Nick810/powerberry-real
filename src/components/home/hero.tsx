@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
             {data.heading || ''}
         </h1>
         <p className='mb-8! md:mb-16! text-white! text-xl text-stroke-sm'>{data.text || ''}</p>
-        <Link href="/all-products" className="btn w-full max-w-[320px]! m-auto rounded-md">Shop Now</Link>
+        <Link href="/all-products" className="btn w-full max-w-[320px]! m-auto rounded-md btn-main-color">Shop Now</Link>
       </div>
     </div>
   )
