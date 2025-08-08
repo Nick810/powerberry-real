@@ -84,7 +84,7 @@ const Product: React.FC<ProductProps> = ({ product, colorMap }) => {
       )}
       <div className="container mt-8 md:basis-[63%]">
         <div className="flex flex-row items-start gap-8 justify-between">
-          <h1 className="text-4xl leading-8!">{product?.title}</h1>
+          <h1 className="text-3xl lg:text-4xl leading-8! max-w-[560px]">{product?.title}</h1>
           <p className="text-xl"><span className="mr-1">฿</span>{(Number(price) * 1).toLocaleString()}</p>
         </div>
 
@@ -99,7 +99,7 @@ const Product: React.FC<ProductProps> = ({ product, colorMap }) => {
           )
         }
 
-        <label className="block my-4 text-black">
+        {/* <label className="block my-4 text-black">
           Quantity:
           <input
             type="number"
@@ -107,17 +107,43 @@ const Product: React.FC<ProductProps> = ({ product, colorMap }) => {
             value={quantity}
             onChange={e => setQuantity(Number(e.target.value))}
           />
-        </label>
+        </label> */}
+
+        <div className="w-full border-b border-[#818181] py-2 mb-8 mt-4 max-w-[160px]">
+          <div className="flex items-center justify-between text-black">
+            <span className="text-sm font-medium">Quantity</span>
+
+            <div className="relative">
+              <select
+                value={quantity}
+                onChange={e => setQuantity(Number(e.target.value))}
+                className="appearance-none bg-transparent px-3 py-1 pr-8 text-sm text-black focus:outline-none focus:none"
+              >
+                {[...Array(10)].map((_, i) => (
+                  <option key={i + 1} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
+              </select>
+
+              {/* Custom dropdown arrow */}
+              <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-500 text-xs">
+                ▼
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <button
-          className="btn cursor-pointer m-auto btn-main-color"
+          className="btn cursor-pointer  btn-main-color max-w-[480px]"
           onClick={handleAddToCart}
           disabled={!selected.availableForSale}
         >
           {selected.availableForSale ? 'Add to Cart' : 'Sold Out'}
         </button>
 
-        <div className="mt-8">
+        <div className="mt-8 max-w-[560px]">
           <ProductDrawer data={{ title: 'Details', details: product?.descriptionHtml, html: true }} />
           <ProductDrawer data={{ title: 'Size & Fit', details: 'Info', html: false }} />
           <ProductDrawer data={{ title: 'Shipping & Returns', details: 'Info', html: false }} />

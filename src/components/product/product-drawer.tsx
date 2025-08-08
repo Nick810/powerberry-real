@@ -8,7 +8,7 @@ interface ProductDrawerProps {
 
 const ProductDrawer: React.FC<ProductDrawerProps> = ({ data }) => {
   return (
-    <div className="border-b-2 border-[#333] py-4 cursor-pointer">
+    <div className="border-b-1 border-[#818181] py-4 cursor-pointer">
       {
         data.html && data.details ?
         <div
