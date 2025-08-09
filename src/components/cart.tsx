@@ -126,18 +126,18 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
         {
           error ?? <p className="text-[#E21515]">{error}</p>
         }
-        <div className="relative mt-23">
+        <div className="relative mt-2 px-[5%]">
 
           <div>
             {items.length > 0 && (
               <button
-                className="mt-4 btn m-auto z-21"
+                className="mt-4 btn m-auto z-21 btn-main-color"
                 disabled={checkingOut}
                 onClick={handleCheckout}
               >
                 { checkingOut ? 'Please wait...' : 'Checkout'}
               </button>
-            )}
+            )  }
           </div>
 
         </div>
