@@ -1,6 +1,7 @@
 import { useCartStore } from "@/lib/shopify/cart/cart-store";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import ImageWithSkeleton from "./image-with-skeleton";
 
 type CartProps = {
   toggled: boolean;
@@ -37,8 +38,6 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
     [items]
   )
 
-  console.log(bgColor)
-
   return (
     <div 
       className={`${toggled ? 'fixed' : 'hidden'} w-full max-w-[600px] h-screen top-0 z-20`}
@@ -49,7 +48,7 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
       <div className="flex flex-row items-center justify-between py-6 px-[5%]">
         <h2 className="text-3xl">Cart</h2>
         <button onClick={() => toggle(false)} className="text-black cursor-pointer">
-          <Image src="/close.svg" alt="Close Button" width={48} height={48} />
+          <Image src="/close.svg" alt="Close Button" width={48} height={48} priority />
         </button>
       </div>
 
@@ -69,7 +68,12 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
               >
                 <div className="flex flex-row min-w-full gap-4 border-b-1 border-[#818181] py-4">
                   <div className="relative w-[20%]">
-                    <Image src={item.image || ''} alt={item.title} fill className="object-cover"/>
+                    {/* <Image src={item.image || ''} alt={item.title} fill className="object-cover"/> */}
+                    <ImageWithSkeleton
+                      src={item.image || ''} 
+                      alt={item.title} 
+                      className="object-cover"
+                     />
                   </div>
 
                   <div className="flex-1 flex flex-col gap-1">
@@ -101,7 +105,7 @@ const Cart: React.FC<CartProps> = ({ toggled, toggle, bgColor }) => {
                       className="cursor-pointer mt-auto"
                       onClick={() => removeItem(item.variantId)}
                     >
-                      <Image src="/trash.svg" alt="Remove Item Button" width={20} height={20} className="ml-auto"/>
+                      <Image src="/trash.svg" alt="Remove Item Button" width={20} height={20} className="ml-auto" priority/>
                     </button>
                   </div>
                   
